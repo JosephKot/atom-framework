@@ -126,4 +126,6 @@ The head will look like this...
 
 	</head>
 
+	- Check out the finished index.php at https://github.com/JosephKot/atom-framework
+
 
