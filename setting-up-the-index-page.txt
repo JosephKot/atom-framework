@@ -1,0 +1,129 @@
+AtomCMS 2.0
+
+Notes:
+
+Part 3 - Setting up the project...
+https://www.youtube.com/watch?v=VURO2jqy3fw&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt&index=3
+
+
+
+- Create a new project folder for AtomCMS
+- create an index.php
+- Setup a standard <!DOCTYPE html> document
+
+- copy/paste the Bootstrap CDN javaScript and CSS from http://getbootstrap.com/getting-started/ . There were issues with this CDN and I had to copy the CDNs from the video.
+
+	The head will look like this...
+	
+	<head>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+	</head>
+
+- Now, add the jQuery.js CDN from http://jquery.com/. This must be loaded before Bootstrap's .js file, because Bs is based on jQuery. I used the version off of the tutorial, because I was having issues with the current version. 
+
+The head will look like this...
+
+	<head>
+
+		<!-- Latest compiled and minified Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional Bootstrap theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- jQuery CDN -->
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+		<!-- Latest compiled and minified Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</head>
+
+- Now, add the jQuery UI javaScript from http://jqueryui.com/ . This has to load AFTER the jQuery.js loads.
+
+The head will look like this...
+
+	<head>
+
+		<!-- Latest compiled and minified Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional Bootstrap theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- jQuery CDN -->
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+		<!-- jquery UI CDN-->
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+		<!-- Latest compiled and minified Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</head>
+
+- Now, add the jQuery UI CSS CDN after the Bootstrap theme CSS.
+
+The head will look like this...
+
+	<head>
+
+		<!-- Latest compiled and minified Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional Bootstrap theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- jQuery UI CSS CDN -->
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+		<!-- jQuery CDN -->
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+		<!-- jquery UI CDN-->
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+		<!-- Latest compiled and minified Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</head>
+
+	- Add FontAwesome from http://fontawesome.io/get-started/
+
+The head will look like this...
+
+	<head>
+
+		<!-- Latest compiled and minified Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional Bootstrap theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- jQuery UI CSS CDN -->
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+		<!-- Fontawesome -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+		<!-- jQuery CDN -->
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+		<!-- jquery UI CDN-->
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+		<!-- Latest compiled and minified Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</head>
+
+
