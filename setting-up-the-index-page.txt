@@ -195,3 +195,30 @@ Part 6 - Setting up the database -----------------------------------------------
 - In setup.php add the $dbc database connection variable, with the die function to kill the page if it throws an error
 
 - Create database 'codemodecms' and grant priveleges to the 'AdminTemp' user, using 'password1' as the password, in phpmyadmin
+
+
+
+
+----------------------------------------------------------------------------------------------->>>
+Part 1 thru 6 - Summary ----------------------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+- Setup index.php with Bootstrap and javascript functioning in the head.
+
+- Build the navigation, content, and footer.
+
+- Create a config folder and move the CSS and JS to their own files
+
+- Create a setup.php file to include the database connection variable and set the site and page titles as variables
+
+- In index.php, include setup.php, css.php, and js.php
+
+
+
+----------------------------------------------------------------------------------------------->>>
+Part 7 thru 8 - Creating the tables ----------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+- Go into phpmyadmin and create the pages table with id, title, header, body. Make id the primary key and use auto increment.
+
+- Create the Home page and About Us pages in the pages table. Leave id blank, as it will auto increment on its own.
