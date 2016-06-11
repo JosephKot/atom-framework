@@ -33,7 +33,7 @@ https://www.youtube.com/watch?v=VURO2jqy3fw&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiG
 
 - Now, add the jQuery.js CDN from http://jquery.com/. This must be loaded before Bootstrap's .js file, because Bs is based on jQuery. I used the version off of the tutorial, because I was having issues with the current version. 
 
-The head will look like this...
+- The head will look like this...
 
 	<head>
 
@@ -53,7 +53,7 @@ The head will look like this...
 
 - Now, add the jQuery UI javaScript from http://jqueryui.com/ . This has to load AFTER the jQuery.js loads.
 
-The head will look like this...
+ -The head will look like this...
 
 	<head>
 
@@ -76,7 +76,7 @@ The head will look like this...
 
 - Now, add the jQuery UI CSS CDN after the Bootstrap theme CSS.
 
-The head will look like this...
+- The head will look like this...
 
 	<head>
 
@@ -102,7 +102,7 @@ The head will look like this...
 
 	- Add FontAwesome from http://fontawesome.io/get-started/
 
-The head will look like this...
+- The head will look like this...
 
 	<head>
 
@@ -133,10 +133,10 @@ The head will look like this...
 
 
 ----------------------------------------------------------------------------------------------->>>
-Part 3 - Setting up the UX/UI (Navigation)----------------------------------------------------->>>
+Part 3 to 4 - Setting up the UX/UI (Navigation)----------------------------------------------------->>>
 ----------------------------------------------------------------------------------------------->>>
 
-Go to http://getbootstrap.com/components/#navbar and create the unordered list...
+- Go to http://getbootstrap.com/components/#navbar and create the unordered list...
 
 	<body>
 
@@ -155,8 +155,27 @@ Go to http://getbootstrap.com/components/#navbar and create the unordered list..
 
 	</body>
 
-Go back to http://getbootstrap.com/css/#grid and create the grid + containers. 
+- Go back to http://getbootstrap.com/css/#grid and create the grid + containers. 
 
-Wrap the navigation, content and footer in containers. 
+- Wrap the navigation, content and footer in containers. 
 
-Grab the sticky footer css from the page source of the sticky footer example at http://getbootstrap.com/getting-started/#examples and temporarily paste it in the <head>
+- Grab the sticky footer css from the page source of the sticky footer example at http://getbootstrap.com/getting-started/#examples and temporarily paste it in the <head>. Make sure the footer has a class, not an id.
+
+- Add the viewport <meta> in the head and give it a title.
+
+
+
+
+----------------------------------------------------------------------------------------------->>>
+Part 5 - Setting up the file structure -------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+- Start splitting the head into separate files for CSS and javaScript. The folder is called config.
+
+- Create config/css.php and strip out the CSS from index.php
+
+- include(config/css.php) in the head of index.php
+
+- Create config/js.php and strip out the JS from index.php
+
+- include(config/js.php) in the head of index.php
