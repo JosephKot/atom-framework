@@ -2,6 +2,9 @@
 <html>
 	<head>
 
+		<title>CODEMODE.CA</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<!-- Latest compiled and minified Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -23,9 +26,65 @@
 		<!-- Latest compiled and minified Bootstrap JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+		<!-- Temporarily add the Bootstrap Sticky Footer css in the head -->
+		<style>
+			html {
+			  position: relative;
+			  min-height: 100%;
+			}
+			body {
+			  /* Margin bottom by footer height */
+			  margin-bottom: 60px;
+			}
+			.footer {
+			  position: absolute;
+			  bottom: 0;
+			  width: 100%;
+			  /* Set the fixed height of the footer here */
+			  height: 60px;
+			  background-color: #f5f5f5;
+			}
+		</style>
+
 	</head>
 	
 	<body>
-		<h1><i class="fa fa-leaf fa-5x"></i>Hello World!</h1>
+
+		<div id="wrap"><!-- for Sticky footer -->
+
+			<nav class="navbar navbar-default" role="navigation"> 
+
+				<div class="container"><!-- line up the menu with the content -->
+				
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li> <!-- add the active class -->
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+
+				</div><!-- END NAVIGATION CONTAINER -->
+
+			</nav><!-- END NAV -->
+
+			<div class="container">
+			
+				<h1>Content Area</h1>
+
+			</div><!-- END CONTENT CONTAINER -->
+
+		</div><!-- END WRAP -->
+
+		<!-- Add Bootstrap's Sticky Footer CSS in the head and class="footer" to the <footer>, then wrap the navigation and the content with a <div id="wrap"> -->
+		<footer class="footer">
+
+			<div class="container">
+
+				<p>This is the footer</p>
+
+			</div><!-- END FOOTER CONTAINER -->
+
+		</footer><!-- END FOOTER -->
+
 	</body>
 </html>

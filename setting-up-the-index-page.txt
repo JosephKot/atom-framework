@@ -2,7 +2,10 @@ AtomCMS 2.0
 
 Notes:
 
-Part 3 - Setting up the project...
+----------------------------------------------------------------------------------------------->>>
+Part 3 - Setting up the project---------------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
 https://www.youtube.com/watch?v=VURO2jqy3fw&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt&index=3
 
 
@@ -129,3 +132,31 @@ The head will look like this...
 	- Check out the finished index.php at https://github.com/JosephKot/atom-framework
 
 
+----------------------------------------------------------------------------------------------->>>
+Part 3 - Setting up the UX/UI (Navigation)----------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+Go to http://getbootstrap.com/components/#navbar and create the unordered list...
+
+	<body>
+
+		<nav class="navbar navbar-default" role="navigation"> <!-- add role="navigation" -->
+		
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li> <!-- add the active class -->
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+
+		</nav><!-- END NAV -->
+
+		
+
+	</body>
+
+Go back to http://getbootstrap.com/css/#grid and create the grid + containers. 
+
+Wrap the navigation, content and footer in containers. 
+
+Grab the sticky footer css from the page source of the sticky footer example at http://getbootstrap.com/getting-started/#examples and temporarily paste it in the <head>
