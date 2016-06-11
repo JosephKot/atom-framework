@@ -4,7 +4,7 @@
 <html>
 	<head>
 
-		<title>CODEMODE.CA</title>
+		<title><?php echo $page_title.' | '.$site_title ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<?php include('config/css.php') ?>

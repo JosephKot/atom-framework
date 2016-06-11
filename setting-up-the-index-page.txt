@@ -179,3 +179,19 @@ Part 5 - Setting up the file structure -----------------------------------------
 - Create config/js.php and strip out the JS from index.php
 
 - include(config/js.php) in the head of index.php
+
+- Create config/setup.php in prep for database connection. This will be moved to it's own file, for security
+
+
+
+----------------------------------------------------------------------------------------------->>>
+Part 6 - Setting up the database -------------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+- In setup.php, create $site_title and $page_title variables to use throughout site
+
+- In index.php, change title to <title><?php echo $page_title.' | '.$site_title ?></title>
+
+- In setup.php add the $dbc database connection variable, with the die function to kill the page if it throws an error
+
+- Create database 'codemodecms' and grant priveleges to the 'AdminTemp' user, using 'password1' as the password, in phpmyadmin
