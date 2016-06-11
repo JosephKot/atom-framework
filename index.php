@@ -4,7 +4,7 @@
 <html>
 	<head>
 
-		<title><?php echo $page_title.' | '.$site_title ?></title>
+		<title><?php echo $page['title'].' | '.$site_title ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<?php include('config/css.php') ?>
@@ -33,7 +33,8 @@
 
 			<div class="container">
 			
-				<h1>Content Area</h1>
+				<h1><?php echo $page['header']; ?></h1><!-- display the header data from id-1 - the Home Page - in the pages table -->
+				<p><?php echo $page['body']; ?><!-- display the body data -->
 
 			</div><!-- END CONTENT CONTAINER -->
 

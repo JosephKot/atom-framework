@@ -222,3 +222,18 @@ Part 7 thru 8 - Creating the tables --------------------------------------------
 - Go into phpmyadmin and create the pages table with id, title, header, body. Make id the primary key and use auto increment.
 
 - Create the Home page and About Us pages in the pages table. Leave id blank, as it will auto increment on its own.
+
+
+
+
+----------------------------------------------------------------------------------------------->>>
+Part 9 - Calling data from the database ------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+- In index.php, setup the first query with $q and $r variables
+
+- To display data from the pages table, create the $page variable
+
+- Use $page['xxx'] to display the page header, body and title in the tab
+
+- Strip the pages query out of index.php and put it into setup.php. index.php
