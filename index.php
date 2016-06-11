@@ -22,10 +22,10 @@
 				
 					<ul class="nav navbar-nav">
 						<!-- ?page=1 is explained in part 10 - sending an id to th url to dynamically change the pages query -->
-						<li<?php if($page_id == 1) { echo ' class="active"'; } ?>><a href="?page=1">Home</a></li>
-						<li<?php if($page_id == 2) { echo ' class="active"'; } ?>><a href="?page=2">About Us</a></li>
-						<li<?php if($page_id == 3) { echo ' class="active"'; } ?>><a href="?page=3">FAQ</a></li>
-						<li<?php if($page_id == 4) { echo ' class="active"'; } ?>><a href="?page=4">Contact</a></li>
+						<li<?php if($pageid == 1) { echo ' class="active"'; } ?>><a href="?page=1">Home</a></li>
+						<li<?php if($pageid == 2) { echo ' class="active"'; } ?>><a href="?page=2">About Us</a></li>
+						<li<?php if($pageid == 3) { echo ' class="active"'; } ?>><a href="?page=3">FAQ</a></li>
+						<li<?php if($pageid == 4) { echo ' class="active"'; } ?>><a href="?page=4">Contact</a></li>
 					</ul>
 
 				</div><!-- END NAVIGATION CONTAINER -->
@@ -41,8 +41,7 @@
 
 		</div><!-- END WRAP -->
 
-		<!-- Add Bootstrap's Sticky Footer CSS in the head and class="footer" to the <footer>, then wrap the navigation and the content with a <div id="wrap"> -->
-		<footer class="footer">
+		<footer class="footer"><!-- must be a class for sticky footer to work -->
 
 			<div class="container">
 

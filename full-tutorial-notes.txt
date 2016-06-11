@@ -270,3 +270,11 @@ Part 6 thru 10 - Summary -------------------------------------------------------
 By sending and retrieving data directly through the url $_GET array, we can dynamically access and display information from the database. We set the query to dynamically change the id that it looks for by getting it to search for the id number displayed in the url. We hard coded the id into the nav items with href="?page=1" so that when you go to that page, the url prints ?page=1, the database reads the records for id = 1 and the data is displayed accordingly. 
 
 
+----------------------------------------------------------------------------------------------->>>
+Part 11 - 'Functioning Out' ------------------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+- Create a functions folder and a new file called data.php
+
+- Grab the pages query from setup.php and move it to data.php
+
