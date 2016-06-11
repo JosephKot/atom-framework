@@ -165,7 +165,6 @@ Part 3 to 4 - Setting up the UX/UI (Navigation)---------------------------------
 
 
 
-
 ----------------------------------------------------------------------------------------------->>>
 Part 5 - Setting up the file structure -------------------------------------------------------->>>
 ----------------------------------------------------------------------------------------------->>>
@@ -185,23 +184,8 @@ Part 5 - Setting up the file structure -----------------------------------------
 
 
 ----------------------------------------------------------------------------------------------->>>
-Part 6 - Setting up the database -------------------------------------------------------------->>>
 ----------------------------------------------------------------------------------------------->>>
-
-- In setup.php, create $site_title and $page_title variables to use throughout site
-
-- In index.php, change title to <title><?php echo $page_title.' | '.$site_title ?></title>
-
-- In setup.php add the $dbc database connection variable, with the die function to kill the page if it throws an error
-
-- Create database 'codemodecms' and grant priveleges to the 'AdminTemp' user, using 'password1' as the password, in phpmyadmin
-
-
-
-
------------------------------------------------------------------------------------------------>>>
-Part 1 thru 6 - Summary ----------------------------------------------------------------------->>>
------------------------------------------------------------------------------------------------>>>
+Part 1 thru 5 - Summary ----------------------------------------------------------------------->>>
 
 - Setup index.php with Bootstrap and javascript functioning in the head.
 
@@ -213,6 +197,22 @@ Part 1 thru 6 - Summary --------------------------------------------------------
 
 - In index.php, include setup.php, css.php, and js.php
 
+----------------------------------------------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+
+----------------------------------------------------------------------------------------------->>>
+Part 6 - Setting up the database -------------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+- In setup.php, create $site_title and $page_title variables to use throughout site
+
+- In index.php, change title to <title><?php echo $page_title.' | '.$site_title ?></title>
+
+- In setup.php add the $dbc database connection variable, with the die function to kill the page if it throws an error
+
+- Create database 'codemodecms' and grant priveleges to the 'AdminTemp' user, using 'password1' as the password, in phpmyadmin
 
 
 ----------------------------------------------------------------------------------------------->>>
@@ -237,3 +237,36 @@ Part 9 - Calling data from the database ----------------------------------------
 - Use $page['xxx'] to display the page header, body and title in the tab
 
 - Strip the pages query out of index.php and put it into setup.php. index.php
+
+----------------------------------------------------------------------------------------------->>>
+Part 10 - Loading URL content with $_GET ------------------------------------------------------>>>
+----------------------------------------------------------------------------------------------->>>
+
+You can send data directly to the page (home, in his example) by typing data directly into the url. By adding ?page=1234 to the url and then adding 'echo $_GET['page'] to index.php, you display '1234' in the page. It's storing whatever you add in the url as an array called $_GET.
+
+We can use this to get information from the url and then display it
+
+- In setup.php, change the query to "SELECT * FROM pages WHERE id = $_GET[page]"; (no single quotes when using double quotes!)
+
+- In the browser, change the end of the url to index.php?page=1 and you display the home page. Change the number to 2 and you display the about us page. You are changing data straight thru the url.
+
+- Wrap the query in an if statement that declares 'if the page is set in the url, store the result in $page_id'
+
+- Go into the query and replace WHERE id = $_GET[page] with WHERE id = $page_id. Now, if ?page=1 in the url, it will use 1 as the id and get that data.
+
+- Add an else statement whigh sets $page_id to default to 1 and take the user to the front page, regardles of what's added to the url.
+
+- To add ?page= to the end of the url of each page, add ?page=1 to the href in the home navigation item, then change the href of each page. About Us = ?page2. FAQ = ?page3. etc.
+
+- Now the navigation sends that value to the url and the query grabs that page's data and displays it. The index.php now handles all of the data for the site. Whatever page you add to the site will be accessible by the navigation.
+
+- Add class="active" to the active navigation item by hard-coding it into each <li> with an if statement <?php if($page_id == 1) { echo 'class="active"'; } ?> and <?php if($page_id == 2) { echo 'class="active"'; } ?> etc.
+
+
+----------------------------------------------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+Part 6 thru 10 - Summary ----------------------------------------------------------------------->>>
+
+By sending and retrieving data directly through the url $_GET array, we can dynamically access and display information from the database. We set the query to dynamically change the id that it looks for by getting it to search for the id number displayed in the url. We hard coded the id into the nav items with href="?page=1" so that when you go to that page, the url prints ?page=1, the database reads the records for id = 1 and the data is displayed accordingly. 
+
+
