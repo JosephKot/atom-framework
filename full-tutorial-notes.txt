@@ -133,8 +133,10 @@ https://www.youtube.com/watch?v=VURO2jqy3fw&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiG
 
 
 ----------------------------------------------------------------------------------------------->>>
-Part 3 to 4 - Setting up the UX/UI (Navigation)----------------------------------------------------->>>
+Part 4 - Setting up the UX/UI (Navigation)----------------------------------------------------->>>
 ----------------------------------------------------------------------------------------------->>>
+
+https://www.youtube.com/watch?v=C1pl98_WZUE&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt&index=4
 
 - Go to http://getbootstrap.com/components/#navbar and create the unordered list...
 
@@ -168,6 +170,8 @@ Part 3 to 4 - Setting up the UX/UI (Navigation)---------------------------------
 ----------------------------------------------------------------------------------------------->>>
 Part 5 - Setting up the file structure -------------------------------------------------------->>>
 ----------------------------------------------------------------------------------------------->>>
+
+https://www.youtube.com/watch?v=uHgENsPCZU4&index=5&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt
 
 - Start splitting the head into separate files for CSS and javaScript. The folder is called config.
 
@@ -203,8 +207,10 @@ Part 1 thru 5 - Summary --------------------------------------------------------
 
 
 ----------------------------------------------------------------------------------------------->>>
-Part 6 - Setting up the database -------------------------------------------------------------->>>
+Part 6 - Setting up the database connection --------------------------------------------------->>>
 ----------------------------------------------------------------------------------------------->>>
+
+https://www.youtube.com/watch?v=2UWAO8aMTnY&index=6&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt
 
 - In setup.php, create $site_title and $page_title variables to use throughout site
 
@@ -219,6 +225,9 @@ Part 6 - Setting up the database -----------------------------------------------
 Part 7 thru 8 - Creating the tables ----------------------------------------------------------->>>
 ----------------------------------------------------------------------------------------------->>>
 
+https://www.youtube.com/watch?v=_lpWwQsOLNo&index=7&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt
+https://www.youtube.com/watch?v=5Sd76v3cLUE&index=8&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt
+
 - Go into phpmyadmin and create the pages table with id, title, header, body. Make id the primary key and use auto increment.
 
 - Create the Home page and About Us pages in the pages table. Leave id blank, as it will auto increment on its own.
@@ -229,6 +238,8 @@ Part 7 thru 8 - Creating the tables --------------------------------------------
 ----------------------------------------------------------------------------------------------->>>
 Part 9 - Calling data from the database ------------------------------------------------------->>>
 ----------------------------------------------------------------------------------------------->>>
+
+https://www.youtube.com/watch?v=_G_OA2XzT9U&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt&index=9
 
 - In index.php, setup the first query with $q and $r variables
 
@@ -241,6 +252,8 @@ Part 9 - Calling data from the database ----------------------------------------
 ----------------------------------------------------------------------------------------------->>>
 Part 10 - Loading URL content with $_GET ------------------------------------------------------>>>
 ----------------------------------------------------------------------------------------------->>>
+
+https://www.youtube.com/watch?v=5g2uAnCXwjE&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt&index=10
 
 You can send data directly to the page (home, in his example) by typing data directly into the url. By adding ?page=1234 to the url and then adding 'echo $_GET['page'] to index.php, you display '1234' in the page. It's storing whatever you add in the url as an array called $_GET.
 
@@ -274,7 +287,22 @@ By sending and retrieving data directly through the url $_GET array, we can dyna
 Part 11 - 'Functioning Out' ------------------------------------------------------------------->>>
 ----------------------------------------------------------------------------------------------->>>
 
+https://www.youtube.com/watch?v=FD_wqVJmpV0&index=11&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt
+
 - Create a functions folder and a new file called data.php
 
 - Grab the pages query from setup.php and move it to data.php
 
+
+
+----------------------------------------------------------------------------------------------->>>
+Part 12 - Creating a Template System ---------------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>
+
+https://www.youtube.com/watch?v=2npqm9eIdVo&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiGwmt&index=12
+
+- Create template/navigation.php folder and file
+
+- Pulling the navigation out of index.php and paste it into navigation.php. This makes it easier to edit the menu globally, in case we need to use it on more than just the index page.
+
+- include navigation.php in index.php, where the <nav> was stripped from
