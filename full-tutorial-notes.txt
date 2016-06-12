@@ -306,3 +306,12 @@ https://www.youtube.com/watch?v=2npqm9eIdVo&list=PLAkMqlQoeMeiwvNWpe3mhgQxAa1jiG
 - Pulling the navigation out of index.php and paste it into navigation.php. This makes it easier to edit the menu globally, in case we need to use it on more than just the index page.
 
 - include navigation.php in index.php, where the <nav> was stripped from
+
+- In setup.php, define a constant that will be used throughout the site for the template folder. We point all calls to the template folder on the setup page with DEFINE('D_TEMPLATE', 'template'); this allows us to create a whole different template folder which we can play with, and only have to return to setup.php to redirect to that template folder, rather than having to change it all over the place.
+
+Go back to index.php and change the calls to navigation and footer with the new D_TEMPLATE constant.
+
+
+----------------------------------------------------------------------------------------------->>>
+Part 13 - Creating Dynamic Navigation Menu ---------------------------------------------------->>>
+----------------------------------------------------------------------------------------------->>>

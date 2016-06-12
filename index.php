@@ -16,7 +16,7 @@
 
 		<div id="wrap">
 
-			<?php include(D_TEMPLATE.'/navigation.php'); ?><!-- replace the template folder with the constant defined in setup.php -->
+			<?php include(D_TEMPLATE.'/navigation.php'); ?><!-- replace the template folder with the D_TEMPLATE constant defined in setup.php -->
 
 			<div class="container">
 			
